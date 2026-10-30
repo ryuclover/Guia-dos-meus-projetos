@@ -17,7 +17,7 @@ Um mapa do meu portfólio, com o objetivo de cada projeto, tecnologias, decisõe
 
 - [Visão geral](#visao-geral)
 - [Extensões e ferramentas criativas](#ferramentas-criativas): Wide Studio e Photopea AI Studio
-- [Aplicações web e plataformas](#aplicacoes-web): BeeHost, Fast-Travel, Clicktube, Pixelboard, Serapeu e mangator
+- [Aplicações web e plataformas](#aplicacoes-web): Olympus Painel, BeeHost, Fast-Travel, Clicktube, Pixelboard, Serapeu e mangator
 - [Desktop, dados e infraestrutura](#sistemas): Masquerada, Projeto Korp, Módulo Mercado Pago e Cornucopia
 - [Interfaces e portfólio](#interfaces): portfólio pessoal e HÔTE
 - [Matriz de tecnologias](#tecnologias)
@@ -31,6 +31,7 @@ Um mapa do meu portfólio, com o objetivo de cada projeto, tecnologias, decisõe
 | :--- | :--- | :--- | :--- |
 | [Wide Studio](#wide-studio) | Extensão / edição de vídeo | TypeScript, extensão de navegador, wide.video | [Download](https://github.com/ryuclover/wide-studio/releases/latest) |
 | [Photopea AI Studio](#photopea-ai-studio) | Plugin / edição de imagem com IA | React, TypeScript, Vite, SDXL | [Repositório](https://github.com/ryuclover/photopea-ai-studio) |
+| [Olympus Painel](#olympus-painel) | Prospecção / CRM / desktop | React, TypeScript, Electron, Python, Flask, SQLite, Supabase | [Repositório](https://github.com/ryuclover/Olympus-painel) |
 | [BeeHost](#beehost) | Hospedagem de jogos / cloud | React, TypeScript, Node.js, Asaas, Daytona | [Repositório](https://github.com/ryuclover/BeeHost) |
 | [Fast-Travel](#fast-travel) | Mobilidade / comparação de passagens | Next.js, TypeScript, APIs, web scraping | [Demo](https://fast-travel-phi.vercel.app) |
 | [Clicktube](#clicktube) | Compartilhamento de vídeos | React, Express, MongoDB, Cloudinary | [Demo](https://clicktubeapp.vercel.app) |
@@ -85,6 +86,21 @@ Plugin experimental para alterar áreas selecionadas de uma imagem com IA e inse
 <a id="aplicacoes-web"></a>
 
 ## 🌐 Aplicações web e plataformas
+
+<a id="olympus-painel"></a>
+
+### Olympus Painel
+
+Plataforma de prospecção comercial e gestão de leads, com aplicativo desktop, backend local e painel administrativo web.
+
+- **Stack:** React, TypeScript, Vite, Tailwind CSS, Electron, Python/Flask, SQLite, Supabase, Playwright, Leaflet e Recharts.
+- **Recursos:** busca de empresas por categoria e localização, lista e mapa de leads, Kanban, dashboard, reuniões, contratos e geração de documentos.
+- **Integrações:** módulos de WhatsApp, Instagram e assistência de IA, com configuração própria dos serviços externos.
+- **Engenharia:** separação entre interface, API Flask, persistência local e integrações; empacotamento desktop com Electron/PyInstaller e painel administrativo separado.
+
+**[Código e configuração](https://github.com/ryuclover/Olympus-painel#readme) · [Guia do backend](https://github.com/ryuclover/Olympus-painel/blob/main/backend/README.md) · [Build para Windows](https://github.com/ryuclover/Olympus-painel/blob/main/README-BUILD.md)**
+
+**Como executar:** instale as dependências com `npm ci` e `python -m pip install -r backend/requirements.txt`, configure as variáveis conforme os arquivos de exemplo e inicie `npm run dev`. Em outro terminal, rode `python app.py` na pasta `backend`. O acesso e as integrações exigem configuração própria; os dados de usuários e credenciais não acompanham o código público.
 
 <a id="beehost"></a>
 
@@ -250,16 +266,16 @@ Versão estática do front-end de um dos meus primeiros sistemas de eventos, ori
 
 | Tecnologia / conceito | Projetos em que aparece |
 | :--- | :--- |
-| TypeScript | Wide Studio, Photopea AI Studio, BeeHost, Fast-Travel, Serapeu, mangator, Masquerada |
-| React / Next.js | Photopea AI Studio, BeeHost, Fast-Travel, Clicktube, Pixelboard, Serapeu, mangator, Masquerada |
+| TypeScript | Olympus Painel, Wide Studio, Photopea AI Studio, BeeHost, Fast-Travel, Serapeu, mangator, Masquerada |
+| React / Next.js | Olympus Painel, Photopea AI Studio, BeeHost, Fast-Travel, Clicktube, Pixelboard, Serapeu, mangator, Masquerada |
 | Extensões e integração com editores | Wide Studio, Photopea AI Studio |
 | IA generativa / SDXL | Photopea AI Studio |
 | Node.js / Express | BeeHost, Clicktube, Pixelboard |
-| Python | Cornucopia, Módulo Mercado Pago |
+| Python | Olympus Painel (Flask), Cornucopia, Módulo Mercado Pago |
 | Go | Projeto Korp |
-| PostgreSQL / Supabase / Prisma | Serapeu, Pixelboard |
+| PostgreSQL / Supabase / Prisma | Olympus Painel (Supabase), Serapeu, Pixelboard |
 | MongoDB / Cloudinary | Clicktube |
-| SQLite | Masquerada, Cornucopia |
+| SQLite | Olympus Painel, Masquerada, Cornucopia |
 | PIX e webhooks | BeeHost (Asaas), Módulo Mercado Pago |
 | Tempo real / P2P | Pixelboard (Socket.io), Masquerada (WebRTC) |
 | Infraestrutura e automação | BeeHost (Daytona, PaperMC, Crafty), Projeto Korp (Docker, NGINX, Ansible), Pixelboard (Docker) |
@@ -267,6 +283,7 @@ Versão estática do front-end de um dos meus primeiros sistemas de eventos, ori
 | Arquitetura hexagonal / SOLID | Módulo Mercado Pago |
 | Segurança e controle de acesso | Serapeu (RLS e políticas no banco), Clicktube (autenticação e validação), Pixelboard (validação no servidor) |
 | Testes automatizados | Wide Studio, Photopea AI Studio, BeeHost, Serapeu, Cornucopia, Módulo Mercado Pago |
+| Desktop / Electron | Olympus Painel, Masquerada |
 | HTML / CSS / JavaScript | Portfólio pessoal, HÔTE |
 
 <a id="autor"></a>
